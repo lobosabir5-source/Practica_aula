@@ -1,13 +1,13 @@
-package com.example.practica_aula.application.service.Impl;
+package com.example.Practica_aula.application.service.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
-import com.example.practica_aula.infrastructure.persistence.UsuarioRepository;
-import com.example.practica_aula.application.dto.UsuarioDto;
-import com.example.practica_aula.domain.Usuario;
-import com.example.practica_aula.application.service.UsuarioService;
-import com.example.practica_aula.domain.UsuarioAdmin;
+import com.example.Practica_aula.infrastructure.persistence.UsuarioRepository;
+import com.example.Practica_aula.application.dto.UsuarioDto;
+import com.example.Practica_aula.domain.Usuario;
+import com.example.Practica_aula.application.service.UsuarioService;
+import com.example.Practica_aula.domain.UsuarioAdmin;
 import java.util.List;
 import java.util.stream.Collectors;
 

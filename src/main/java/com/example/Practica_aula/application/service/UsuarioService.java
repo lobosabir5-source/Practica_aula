@@ -1,6 +1,6 @@
-package com.example.practica_aula.application.service;
+package com.example.Practica_aula.application.service;
 
-import com.example.practica_aula.application.dto.UsuarioDto;
+import com.example.Practica_aula.application.dto.UsuarioDto;
 import java.util.List;
 
 public interface UsuarioService {

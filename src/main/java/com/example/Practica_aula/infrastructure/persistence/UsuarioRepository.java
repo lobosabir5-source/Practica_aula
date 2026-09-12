@@ -1,7 +1,7 @@
-package com.example.practica_aula.infrastructure.persistence;
+package com.example.Practica_aula.infrastructure.persistence;
 
-import com.example.practica_aula.domain.Usuario;
-import com.example.practica_aula.application.dto.UsuarioDto;
+import com.example.Practica_aula.domain.Usuario;
+import com.example.Practica_aula.application.dto.UsuarioDto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

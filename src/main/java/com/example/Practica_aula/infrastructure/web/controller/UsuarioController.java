@@ -1,7 +1,7 @@
-package com.example.practica_aula.infrastructure.web.controller;
+package com.example.Practica_aula.infrastructure.web.controller;
 
-import com.example.practica_aula.application.dto.UsuarioDto;
-import com.example.practica_aula.application.service.UsuarioService;
+import com.example.Practica_aula.application.dto.UsuarioDto;
+import com.example.Practica_aula.application.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
