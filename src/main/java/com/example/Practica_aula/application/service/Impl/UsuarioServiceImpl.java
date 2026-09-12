@@ -2,6 +2,9 @@ package com.example.Practica_aula.application.service.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 import lombok.RequiredArgsConstructor;
 import com.example.Practica_aula.infrastructure.persistence.UsuarioRepository;
 import com.example.Practica_aula.application.dto.UsuarioDto;
@@ -53,6 +56,25 @@ public class UsuarioServiceImpl implements UsuarioService {
 
         Usuario actualizado = usuarioRepository.save(usuario);
         return new UsuarioDto(actualizado);
+    }
+
+    @Override
+    public void eliminar_fisico(long id){
+        Usuario usuario = usuarioRepository.findById(id)
+            .orElseThrow(() -> new ResponseStatusException(
+                HttpStatus.NOT_FOUND, "Usuario no encontrado"));
+        
+        usuarioRepository.delete(usuario);
+    }
+
+    public void eliminar(long id){
+        Usuario usuario = usuarioRepository.findById(id)
+            .orElseThrow(() -> new ResponseStatusException(
+                HttpStatus.NOT_FOUND, "Usuario no encontrado"));
+                
+        usuario.setEliminado(true);
+        usuarioRepository.save(usuario);
+
     }
 
     @Override

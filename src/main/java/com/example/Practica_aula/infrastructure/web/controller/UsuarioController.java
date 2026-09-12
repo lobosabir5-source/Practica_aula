@@ -28,6 +28,19 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioActualizado);
     }
 
+
+    @DeleteMapping("eliminarfisico/{id}")
+    public ResponseEntity<Void> eliminar_fisico(@PathVariable Long id) {
+        usuarioService.eliminar_fisico(id);
+        return ResponseEntity.noContent().build();
+    }
+        
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+        usuarioService.eliminar(id);
+        return ResponseEntity.noContent().build();
+    }
+    
     @GetMapping
     public ResponseEntity<List<UsuarioDto>> listarUsuarios(){
         return ResponseEntity.ok(usuarioService.listar());
