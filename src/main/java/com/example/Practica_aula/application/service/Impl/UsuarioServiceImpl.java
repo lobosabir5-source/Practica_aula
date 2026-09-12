@@ -39,6 +39,23 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
+    public UsuarioDto editar(Long id, UsuarioDto usuarioDto) {
+        Usuario usuario = usuarioRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+
+        usuario.setNombre(usuarioDto.getNombre());
+        usuario.setEmail(usuarioDto.getEmail());
+
+        if (usuarioDto.getFlagAdmin() != null) {
+            usuario.setFlagAdmin(usuarioDto.getFlagAdmin());
+            usuario.setRol(usuarioDto.getFlagAdmin() ? "ADMIN" : "NORMAL");
+        }
+
+        Usuario actualizado = usuarioRepository.save(usuario);
+        return new UsuarioDto(actualizado);
+    }
+
+    @Override
     public List<UsuarioDto> listar(){
         return usuarioRepository.findAll()
                 .stream()

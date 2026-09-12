@@ -22,6 +22,12 @@ public class UsuarioController {
         return ResponseEntity.ok(usuario);
     }
     
+    @PutMapping("/{id}")
+    public ResponseEntity<UsuarioDto> editar(@PathVariable Long id, @RequestBody UsuarioDto usuarioDto){
+        UsuarioDto usuarioActualizado = usuarioService.editar(id, usuarioDto);
+        return ResponseEntity.ok(usuarioActualizado);
+    }
+
     @GetMapping
     public ResponseEntity<List<UsuarioDto>> listarUsuarios(){
         return ResponseEntity.ok(usuarioService.listar());
