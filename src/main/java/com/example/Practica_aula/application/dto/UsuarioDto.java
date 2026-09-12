@@ -1,11 +1,11 @@
-package com.example.practica_aula.application.dto;
+package com.example.Practica_aula.application.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.AllArgsConstructor;
 import java.time.LocalDateTime;
-import com.example.practica_aula.domain.Usuario;
+import com.example.Practica_aula.domain.Usuario;
 
 @Getter
 @Setter
