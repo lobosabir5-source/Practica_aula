@@ -9,9 +9,7 @@ import java.util.List;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
-
-
-    @Query("SELECT new com.unifranz.programaciontres_cristian_antezana.application.dto.UsuarioDto(u)"+
+    @Query("SELECT new com.example.practica_aula.application.dto.UsuarioDto(u)" +
             " FROM Usuario u" +
             " WHERE u.eliminado = false")
     List<UsuarioDto> listarActivos();

@@ -1,4 +1,4 @@
-package com.example.Practica_aula;
+package com.example.practica_aula;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

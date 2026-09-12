@@ -1,4 +1,4 @@
-package com.example.Practica_aula;
+package com.example.practica_aula;
 
 import com.example.practica_aula.application.dto.UsuarioDto;
 import com.example.practica_aula.application.service.UsuarioService;
