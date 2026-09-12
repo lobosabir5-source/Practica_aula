@@ -50,6 +50,16 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuarioRepository.delete(usuario);
     }
 
+    public void eliminar(long id){
+        Usuario usuario = usuarioRepository.findById(id)
+            .orElseThrow(() -> new ResponseStatusException(
+                HttpStatus.NOT_FOUND, "Usuario no encontrado"));
+                
+        usuario.setEliminado(true);
+        usuarioRepository.save(usuario);
+
+    }
+
     @Override
     public List<UsuarioDto> listar(){
         return usuarioRepository.findAll()
